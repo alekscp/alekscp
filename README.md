@@ -4,9 +4,7 @@
 
 🧰 Toolbox
 
-<img src="https://worldvectorlogo.com/download/solidity.svg" alt="Solidity Logo" width="50" height="50"> <img src="https://worldvectorlogo.com/download/ethereum.svg" alt="Ethereum Logo" width="50" height="50"> <img src="https://worldvectorlogo.com/download/logo-javascript.svg" alt="Javascript Logo" width="50" height="50"> <img src="https://worldvectorlogo.com/download/ruby.svg" alt="Ruby Logo" width="50" height="50"> <img src="https://worldvectorlogo.com/download/rails-1.svg" alt="Rails Logo" width="50" height="50"> <img src="https://worldvectorlogo.com/download/aws-2.svg " alt="AWS Logo" width="50" height="50">
-
----
+<img src="https://worldvectorlogo.com/download/solidity.svg" alt="Solidity Logo" width="50" height="50"/> <img src="https://worldvectorlogo.com/download/ethereum.svg" alt="Ethereum Logo" width="50" height="50"/> <img src="https://worldvectorlogo.com/download/logo-javascript.svg" alt="Javascript Logo" width="50" height="50"/> <img src="https://worldvectorlogo.com/download/ruby.svg" alt="Ruby Logo" width="50" height="50"/> <img src="https://worldvectorlogo.com/download/rails-1.svg" alt="Rails Logo" width="50" height="50"/> <img src="https://worldvectorlogo.com/download/aws-2.svg" alt="AWS Logo" width="50" height="50"/>
 
 ---
 
