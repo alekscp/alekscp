@@ -8,6 +8,15 @@
 
 ---
 
+## Ethereum projects
+
+- [ethernaut-challenges](https://github.com/alekscp/ethernaut-challenges)
+- [DyDxFlashloan](https://github.com/alekscp/DyDxFlashloan)
+- [multisigwallet](https://github.com/alekscp/multisigwallet)
+- [PTNToken](https://github.com/alekscp/PTNToken)
+- [rock_paper_scissors_dapp](https://github.com/alekscp/rock_paper_scissors_dapp)
+- [voting_dapp](https://github.com/alekscp/voting_dapp)
+
 ## &#x1f4c8; My GitHub Stats
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alekscp&hide=java,html,css&theme=gruvbox)](https://github.com/anuraghazra/github-readme-stats)
