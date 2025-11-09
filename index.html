@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aleks CP — DevOps & Cloud Infrastructure Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Independent DevOps & Cloud Infrastructure Engineer helping startups deploy, scale, and secure backend systems." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-light: rgba(15, 23, 42, 0.5);
+      --fg: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --card: rgba(15, 23, 42, 0.35);
+      --radius: 1.25rem;
+      --max-width: 900px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937, #020617 55%);
+      color: var(--fg);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    header {
+      border-bottom: 1px solid rgba(226, 232, 240, 0.06);
+      backdrop-filter: blur(16px);
+      background: rgba(2, 6, 23, 0.35);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.2rem;
+    }
+    nav .brand {
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .hero {
+      max-width: var(--max-width);
+      margin: 3.5rem auto 2.5rem;
+      padding: 0 1.2rem;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 2rem;
+    }
+    .hero-left h1 {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      margin-bottom: 0.6rem;
+    }
+    .hero-left p.lead {
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 32rem;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0 1.75rem;
+    }
+    .tag {
+      background: rgba(3, 105, 161, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+    }
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+    }
+    .btn {
+      background: var(--accent);
+      color: #020617;
+      border: none;
+      padding: 0.55rem 1.05rem;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .btn-secondary {
+      background: rgba(2, 6, 23, 0.4);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--fg);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.15rem 1rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.9rem;
+    }
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.2rem 2.5rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1.1rem;
+    }
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .project-title {
+      font-weight: 600;
+    }
+    .muted {
+      color: var(--muted);
+    }
+    footer {
+      padding: 1.2rem 1.2rem 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.7rem;
+    }
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero-actions {
+        flex-wrap: wrap;
+      }
+      nav ul {
+        gap: .6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand">Aleks CP</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <h1>Independent DevOps & Cloud Infrastructure Engineer</h1>
+        <p class="lead">
+          I help startups deploy, scale, and secure backend systems — from MVP to production — using AWS, Terraform, Docker, and pragmatic automation.
+        </p>
+        <div class="tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Bare-metal</span>
+          <span class="tag">Linux</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="https://github.com/alekscp" target="_blank" rel="noreferrer">View GitHub</a>
+        </div>
+      </div>
+      <div class="hero-right card">
+        <h2>What I do</h2>
+        <p class="muted">Design, automate, and operate production-grade infrastructure.</p>
+        <ul>
+          <li>Infrastructure as Code (Terraform)</li>
+          <li>CI/CD (GitHub Actions)</li>
+          <li>Cloud & bare-metal deployments</li>
+          <li>Monitoring & observability</li>
+          <li>Collaborate with dev teams — write backend code when needed</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I’m a senior DevOps and cloud infrastructure engineer with 10+ years of experience designing, automating, and running systems for startups and tech companies.
+          I focus on solutions that are reliable, observable, and easy for teams to maintain.
+        </p>
+        <p>
+          I work across AWS, Docker, Terraform, GitHub Actions, Ansible, Linux, and bare-metal environments. I’m also comfortable jumping into the application layer to integrate infra with real products.
+        </p>
+        <p>
+          Co-founder of <a href="https://folk.software" target="_blank" rel="noreferrer">folk.software</a>, where I’ve led infrastructure and deployment for our products.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Selected work</h2>
+      <div class="grid projects-grid">
+        <div class="card">
+          <div class="project-title">FOLK (Telegram mini-app)</div>
+          <p class="muted">
+            Built under folk.software — I designed and operated the infrastructure and deployment pipeline for a Telegram-based product, focusing on reliability and fast iteration.
+          </p>
+        </div>
+        <div class="card">
+          <div class="project-title">Cloud & IaC setups</div>
+          <p class="muted">
+            AWS-based environments with Terraform, Docker, GitHub Actions, monitoring stacks, and secure networking for startups moving from MVP to production.
+          </p>
+        </div>
+        <div class="card">
+          <div class="project-title">Bare-metal + Linux</div>
+          <p class="muted">
+            Experience running high-availability services on dedicated servers (OVH and similar), hardened Linux, terminal-first workflows (nvim, tmux).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="muted">Interested in working together or need infrastructure help?</p>
+        <p>
+          👉 Email: <a href="mailto:me@alekscp.com">me@alekscp.com</a><br />
+          👉 LinkedIn: <a href="https://www.linkedin.com/in/aleks-c-28893426/" target="_blank" rel="noreferrer">linkedin.com/in/aleks-c-28893426/</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="year"></span> © Aleks CP. Built with HTML, CSS, and a terminal-first mindset.
+  </footer>
+
+  <script>
+    // smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
