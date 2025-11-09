@@ -19,6 +19,8 @@ I also contribute to backend development when needed, bridging infrastructure an
 ### 🧰 Tech Focus
 Terraform · AWS · Docker · GitHub Actions · Ansible · Linux · Monitoring & Observability · CI/CD · Bare-Metal Deployments · Node.js · TypeScript
 
+I live in the terminal — Nvim, tmux, and plenty of shell scripts.
+
 ---
 
 ### 📫 Contact
