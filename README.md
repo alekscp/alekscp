@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Aleks Clapin-Pépin  
+# 👋 Hi, I'm Aleks CP
 **Independent DevOps & Cloud Infrastructure Engineer**
 
 I design, automate, and operate production-grade infrastructure for startups and technology companies.  
