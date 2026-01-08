@@ -5,232 +5,590 @@
   <title>Aleks CP — Senior Software & Infrastructure Consultant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Senior software and infrastructure consultant specializing in distributed systems, cloud platforms, and Web3/DeFi. Available for long-term contracts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-    
     :root {
-      --bg: #0f172a;
-      --fg: #f1f5f9;
-      --muted: #94a3b8;
-      --accent: #3b82f6;
-      --accent-hover: #60a5fa;
-      --card: rgba(30, 41, 59, 0.5);
-      --card-border: rgba(148, 163, 184, 0.2);
-      --radius: 0.75rem;
-      --max-width: 920px;
+      --bg-primary: #0a0a0b;
+      --bg-secondary: #111113;
+      --bg-tertiary: #18181b;
+      --fg-primary: #fafafa;
+      --fg-secondary: #a1a1aa;
+      --fg-tertiary: #71717a;
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-glow: rgba(99, 102, 241, 0.15);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.15);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --max-width: 1000px;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
+
     * {
       box-sizing: border-box;
-    }
-    body {
       margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
-      color: var(--fg);
-      line-height: 1.65;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--fg-primary);
+      line-height: 1.6;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
+
+    /* Subtle grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    /* Header */
     header {
-      border-bottom: 1px solid rgba(241, 245, 249, 0.1);
-      backdrop-filter: blur(12px);
-      background: rgba(15, 23, 42, 0.8);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background: rgba(10, 10, 11, 0.85);
+      border-bottom: 1px solid var(--border);
     }
+
     nav {
       max-width: var(--max-width);
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
     }
-    nav .brand {
-      font-weight: 700;
+
+    .brand {
+      font-weight: 600;
+      font-size: 1rem;
       letter-spacing: -0.02em;
-      font-size: 1.05rem;
+      color: var(--fg-primary);
     }
+
+    .brand span {
+      color: var(--accent);
+    }
+
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
+      gap: 2rem;
     }
+
     nav a {
-      color: var(--fg);
+      color: var(--fg-secondary);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.875rem;
       font-weight: 500;
       transition: color 0.2s ease;
+      position: relative;
     }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
     nav a:hover {
-      color: var(--accent-hover);
+      color: var(--fg-primary);
     }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
     .hero {
       max-width: var(--max-width);
-      margin: 4.5rem auto 3.5rem;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 3rem;
-      align-items: start;
+      margin: 0 auto;
+      padding: 6rem 2rem 5rem;
     }
-    .hero-left h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      margin-bottom: 1rem;
-      line-height: 1.15;
+
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
       font-weight: 700;
-      letter-spacing: -0.02em;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      max-width: 14ch;
     }
-    .hero-left p.lead {
-      color: var(--muted);
-      font-size: 1.1rem;
-      max-width: 38rem;
+
+    .hero h1 .gradient {
+      background: linear-gradient(135deg, var(--fg-primary) 0%, var(--fg-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-lead {
+      font-size: 1.125rem;
+      color: var(--fg-secondary);
+      max-width: 540px;
       line-height: 1.7;
+      margin-bottom: 2rem;
     }
-    .tags {
+
+    .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
-      margin: 1.75rem 0 2rem;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.875rem;
+      color: var(--fg-tertiary);
     }
-    .tag {
-      background: rgba(59, 130, 246, 0.1);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      padding: 0.4rem 0.85rem;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #93c5fd;
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
+
+    .hero-meta-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--accent);
+    }
+
     .hero-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
       background: var(--accent);
       color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: var(--radius);
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.5), 0 4px 16px rgba(99, 102, 241, 0.25);
     }
-    .btn:hover {
-      background: var(--accent-hover);
+
+    .btn-primary:hover {
+      background: var(--accent-light);
       transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.6), 0 8px 24px rgba(99, 102, 241, 0.35);
     }
+
     .btn-secondary {
       background: transparent;
-      border: 1.5px solid var(--card-border);
-      color: var(--fg);
-      box-shadow: none;
+      color: var(--fg-primary);
+      border: 1px solid var(--border-hover);
     }
+
     .btn-secondary:hover {
-      border-color: var(--accent);
-      background: rgba(59, 130, 246, 0.1);
+      background: var(--bg-tertiary);
+      border-color: var(--border-hover);
       transform: translateY(-1px);
     }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      transition: all 0.2s ease;
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
     }
-    .card:hover {
-      border-color: rgba(59, 130, 246, 0.4);
-      transform: translateY(-2px);
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
+
+    /* Section styling */
     section {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 1.5rem 3.5rem;
+      padding: 0 2rem 5rem;
     }
-    .grid {
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+    }
+
+    /* Skills grid */
+    .skills-grid {
       display: grid;
-      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
     }
-    .projects-grid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    .skill-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      transition: all 0.2s ease;
     }
-    .project-title {
+
+    .skill-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .skill-card-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-glow);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.875rem;
+      color: var(--accent);
+    }
+
+    .skill-card-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .skill-card h3 {
+      font-size: 0.9375rem;
       font-weight: 600;
-      font-size: 1.1rem;
+      margin-bottom: 0.375rem;
+    }
+
+    .skill-card p {
+      font-size: 0.8125rem;
+      color: var(--fg-tertiary);
+      line-height: 1.5;
+    }
+
+    /* About section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-text p {
+      color: var(--fg-secondary);
+      line-height: 1.75;
+    }
+
+    .about-text a {
+      color: var(--accent-light);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .about-text a:hover {
+      border-color: var(--accent-light);
+    }
+
+    .about-highlights {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+
+    .about-highlights h3 {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--fg-tertiary);
+      margin-bottom: 1.25rem;
+    }
+
+    .highlight-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+
+    .highlight-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      color: var(--fg-secondary);
+    }
+
+    .highlight-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin-top: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* Experience cards */
+    .experience-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .experience-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .experience-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .experience-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
       margin-bottom: 0.5rem;
     }
-    .muted {
-      color: var(--muted);
-      line-height: 1.7;
+
+    .experience-company {
+      font-size: 1.125rem;
+      font-weight: 600;
     }
+
+    .experience-role {
+      font-size: 0.875rem;
+      color: var(--accent-light);
+      font-weight: 500;
+    }
+
+    .experience-description {
+      color: var(--fg-secondary);
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+
+    .experience-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--fg-tertiary);
+      white-space: nowrap;
+    }
+
+    /* Contact section */
+    .contact-intro {
+      color: var(--fg-secondary);
+      font-size: 1.0625rem;
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent);
+      background: var(--accent-glow);
+      transform: translateY(-2px);
+    }
+
+    .contact-card-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-sm);
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .contact-card-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .contact-card-content {
+      min-width: 0;
+    }
+
+    .contact-card-label {
+      font-size: 0.8125rem;
+      color: var(--fg-tertiary);
+      margin-bottom: 0.125rem;
+    }
+
+    .contact-card-value {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--fg-primary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* Footer */
     footer {
-      padding: 2rem 1.5rem 3rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-top: 1px solid rgba(241, 245, 249, 0.1);
-      margin-top: 2rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8125rem;
+      color: var(--fg-tertiary);
     }
-    .card a:not(.btn) {
-      color: var(--accent-hover);
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--fg-tertiary);
       text-decoration: none;
       transition: color 0.2s ease;
     }
-    .card a:not(.btn):hover {
-      color: #93c5fd;
-      text-decoration: underline;
+
+    .footer-links a:hover {
+      color: var(--fg-primary);
     }
-    @media (max-width: 760px) {
+
+    /* Responsive */
+    @media (max-width: 768px) {
       nav {
-        padding: 1rem 1.25rem;
+        padding: 1rem 1.5rem;
       }
+
       nav ul {
-        gap: 1rem;
+        gap: 1.25rem;
       }
-      nav a {
-        font-size: 0.9rem;
-      }
+
       .hero {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        margin: 3.5rem auto 3rem;
-        padding: 0 1.25rem;
+        padding: 4rem 1.5rem 4rem;
       }
-      .hero-left h1 {
-        font-size: clamp(2.2rem, 9vw, 2.8rem);
+
+      .hero h1 {
+        max-width: none;
       }
-      .hero-left p.lead {
-        font-size: 1rem;
-      }
-      .tags {
-        gap: 0.5rem;
-      }
-      .tag {
-        font-size: 0.75rem;
-        padding: 0.35rem 0.75rem;
-      }
+
       section {
-        padding: 0 1.25rem 3rem;
+        padding: 0 1.5rem 4rem;
       }
-      .projects-grid {
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-date {
+        order: -1;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .skills-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -239,157 +597,281 @@
 <body>
   <header>
     <nav>
-      <div class="brand">Aleks CP</div>
+      <div class="brand">Aleks<span>CP</span></div>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Work</a></li>
+        <li><a href="#experience">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero" id="top">
-      <div class="hero-left">
-        <h1>Senior Software & Infrastructure Consultant</h1>
-        <p class="lead">
-          Distributed Systems · Cloud Platforms · Web3 / DeFi. I help startups design, build, and operate production systems end-to-end.
-        </p>
-        <div class="tags">
-          <span class="tag">Distributed Systems</span>
-          <span class="tag">Cloud & Bare-metal</span>
-          <span class="tag">Data Pipelines</span>
-          <span class="tag">Web3 / DeFi</span>
-          <span class="tag">Terraform</span>
-          <span class="tag">CI/CD</span>
-          <span class="tag">Service Reliability</span>
+      <div class="hero-eyebrow">Independent Contractor</div>
+      <h1><span class="gradient">Senior Software & Infrastructure Consultant</span></h1>
+      <p class="hero-lead">
+        Owning backend, infrastructure, and data systems end-to-end. Specialized in distributed systems, cloud platforms, and Web3/DeFi.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+          </svg>
+          <span>Berlin / Montreal / Remote</span>
         </div>
-        <div class="hero-actions">
-          <a class="btn" href="#contact">Get in touch</a>
-          <a class="btn btn-secondary" href="https://github.com/alekscp" target="_blank" rel="noreferrer">View GitHub</a>
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          <span>10+ Years Experience</span>
+        </div>
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
+          </svg>
+          <span>EN / FR / DE</span>
         </div>
       </div>
-      <div class="hero-right card">
-        <h2>What I do</h2>
-        <p class="muted" style="margin-bottom: 1.5rem;">Design, build, and operate distributed production systems.</p>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(148, 163, 184, 0.1); display: flex; align-items: center; gap: 0.75rem;">
-            <span style="color: var(--accent-hover);">▹</span> Distributed backend systems
-          </li>
-          <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(148, 163, 184, 0.1); display: flex; align-items: center; gap: 0.75rem;">
-            <span style="color: var(--accent-hover);">▹</span> Cloud & bare-metal infrastructure
-          </li>
-          <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(148, 163, 184, 0.1); display: flex; align-items: center; gap: 0.75rem;">
-            <span style="color: var(--accent-hover);">▹</span> Data ingestion pipelines
-          </li>
-          <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(148, 163, 184, 0.1); display: flex; align-items: center; gap: 0.75rem;">
-            <span style="color: var(--accent-hover);">▹</span> Production APIs & reliability
-          </li>
-          <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(148, 163, 184, 0.1); display: flex; align-items: center; gap: 0.75rem;">
-            <span style="color: var(--accent-hover);">▹</span> CI/CD & operational tooling
-          </li>
-          <li style="padding: 0.5rem 0; display: flex; align-items: center; gap: 0.75rem;">
-            <span style="color: var(--accent-hover);">▹</span> Complex system integrations
-          </li>
-        </ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+          </svg>
+          Get in Touch
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/alekscp" target="_blank" rel="noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
       </div>
     </section>
 
-    <!-- About -->
+    <section>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z" />
+            </svg>
+          </div>
+          <h3>Distributed Systems</h3>
+          <p>Scalable backend architectures and microservices</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
+            </svg>
+          </div>
+          <h3>Cloud & Bare-metal</h3>
+          <p>AWS, GCP, and on-prem infrastructure</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+            </svg>
+          </div>
+          <h3>Data Pipelines</h3>
+          <p>High-volume ingestion and processing</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
+            </svg>
+          </div>
+          <h3>Web3 / DeFi</h3>
+          <p>Smart contracts and blockchain infra</p>
+        </div>
+      </div>
+    </section>
+
     <section id="about">
-      <h2>About</h2>
-      <div class="card">
-        <p>
-          Senior software and infrastructure consultant with 10+ years of experience designing, building, and operating production systems.
-          Specialized in distributed backend systems, cloud and bare-metal infrastructure, data pipelines, and Web3 / DeFi platforms.
-        </p>
-        <p>
-          Typically engaged in long-term contracts (6-18 months) with high ownership and deep integration into small senior teams.
-          Remote-first with timezone flexibility (Berlin CET, Montreal ET, Bangkok ICT). Fluent in English & French, conversational German.
-        </p>
-        <p>
-          Co-founder of <a href="https://folk.software" target="_blank" rel="noreferrer">Folk Software</a>, building Web3-native products including <strong>FOLK</strong>, a production game deployed on Telegram and TON ecosystem.
-        </p>
+      <div class="section-header">
+        <h2>About</h2>
       </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Selected work</h2>
-      <div class="grid projects-grid">
-        <div class="card">
-          <div class="project-title">Octav</div>
-          <p class="muted">
-            <strong>Lead Software Engineer (Contract)</strong> · May 2023 – Jan 2025<br />
-            Led data ingestion pipelines for multi-chain EVM analytics platform. Owned high-volume on-chain/off-chain financial data processing, CI/CD, and cloud infrastructure.
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Senior software and infrastructure consultant with 10+ years of experience designing, building, and operating production systems. Specialized in distributed backend systems, cloud and bare-metal infrastructure, data pipelines, and Web3/DeFi platforms.
+          </p>
+          <p>
+            Typically engaged in contract-based work with high ownership and deep integration into small senior teams. Remote-first with timezone flexibility across Berlin (CET), Montreal (ET), and Bangkok (ICT). Fluent in English and French, conversational German (B1).
+          </p>
+          <p>
+            Co-founder of <a href="https://folk.software" target="_blank" rel="noreferrer">Folk Software</a>, an independent studio building Web3-native products including <strong>FOLK</strong>, a production game deployed on Telegram and the TON ecosystem.
           </p>
         </div>
-        <div class="card">
-          <div class="project-title">ARCx Labs</div>
-          <p class="muted">
-            <strong>Senior Software Engineer (Contract)</strong> · Aug 2021 – Apr 2023<br />
-            Built Web3 backend infrastructure, microservices, and secure public APIs. Contributed to Solidity smart contracts and EVM network deployments.
-          </p>
-        </div>
-        <div class="card">
-          <div class="project-title">Folk Software</div>
-          <p class="muted">
-            <strong>Co-Founder & Lead Engineer</strong> · 2024 – Present<br />
-            End-to-end development of FOLK game on Telegram/TON. Owned backend architecture, infrastructure, game logic, integrations, and rapid production iteration.
-          </p>
-        </div>
-        <div class="card">
-          <div class="project-title">Babbel</div>
-          <p class="muted">
-            <strong>Senior Software Engineer</strong> · Oct 2017 – Oct 2020<br />
-            Led migration to microservices and modern cloud infrastructure. Owned backend systems for millions of users, on-call operations, and team mentoring.
-          </p>
+        <div class="about-highlights">
+          <h3>Areas of Expertise</h3>
+          <ul class="highlight-list">
+            <li>Designing, operating, and scaling distributed backend systems</li>
+            <li>Cloud and bare-metal infrastructure architecture, automation, and cost optimization</li>
+            <li>Data ingestion and processing pipelines in production environments</li>
+            <li>Production-grade APIs and service reliability</li>
+            <li>CI/CD pipelines, operational tooling, and incident ownership</li>
+            <li>Integrating complex external systems (financial, data, protocol-level)</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <section id="experience">
+      <div class="section-header">
+        <h2>Experience</h2>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <div>
+            <div class="experience-header">
+              <span class="experience-company">Folk Software</span>
+              <span class="experience-role">Co-Founder & Lead Engineer</span>
+            </div>
+            <p class="experience-description">
+              Co-founded an independent studio building Web3-native products. Led end-to-end development of FOLK game on Telegram/TON. Owned backend architecture, infrastructure, deployment pipelines, game logic, and integrations. Worked directly with users, partners, and platform constraints to iterate rapidly in production.
+            </p>
+          </div>
+          <span class="experience-date">2024 - Present</span>
+        </article>
+        <article class="experience-card">
+          <div>
+            <div class="experience-header">
+              <span class="experience-company">Octav</span>
+              <span class="experience-role">Lead Software Engineer (Contract)</span>
+            </div>
+            <p class="experience-description">
+              Led development of data ingestion pipelines for a multi-chain EVM analytics platform serving DeFi users. End-to-end responsibility for design and operation of backend services processing high-volume on-chain and off-chain financial data. Owned CI/CD pipelines and cloud infrastructure, improving reliability and reducing operational costs.
+            </p>
+          </div>
+          <span class="experience-date">May 2023 - Jan 2025</span>
+        </article>
+        <article class="experience-card">
+          <div>
+            <div class="experience-header">
+              <span class="experience-company">ARCx Labs</span>
+              <span class="experience-role">Senior Software Engineer (Contract)</span>
+            </div>
+            <p class="experience-description">
+              Built and operated backend infrastructure supporting DeFi protocols, wallet interactions, and smart contracts. Owned microservices architectures and automated infrastructure using Terraform. Developed secure public APIs for protocol integrations and on-chain data access. Contributed to Solidity smart contracts and EVM network deployments.
+            </p>
+          </div>
+          <span class="experience-date">Aug 2021 - Apr 2023</span>
+        </article>
+        <article class="experience-card">
+          <div>
+            <div class="experience-header">
+              <span class="experience-company">Independent Consultant</span>
+              <span class="experience-role">Various Startups</span>
+            </div>
+            <p class="experience-description">
+              Delivered feature development and system extensions for early-stage startups. Integrated new functionality into existing codebases with minimal disruption. Operated in high-autonomy environments with direct founder and CTO collaboration.
+            </p>
+          </div>
+          <span class="experience-date">2019 - Present</span>
+        </article>
+        <article class="experience-card">
+          <div>
+            <div class="experience-header">
+              <span class="experience-company">Babbel</span>
+              <span class="experience-role">Senior Software Engineer</span>
+            </div>
+            <p class="experience-description">
+              Led migration to microservices architecture and modern cloud infrastructure. Accountable for design and operation of backend systems supporting millions of users and payment workflows. Integrated external services with strong reliability guarantees. On-call engineer for critical infrastructure and mentor to junior developers.
+            </p>
+          </div>
+          <span class="experience-date">Oct 2017 - Oct 2020</span>
+        </article>
+        <article class="experience-card">
+          <div>
+            <div class="experience-header">
+              <span class="experience-company">Wimdu</span>
+              <span class="experience-role">Backend Developer</span>
+            </div>
+            <p class="experience-description">
+              Developed backend services and data pipelines for a large-scale marketplace. Designed APIs and internal tools supporting partner integrations and operational workflows. Built automation services improving reliability, data consistency, and system observability.
+            </p>
+          </div>
+          <span class="experience-date">Nov 2015 - Sep 2017</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-header">
+        <h2>Education</h2>
+      </div>
+      <div class="experience-card">
+        <div>
+          <div class="experience-header">
+            <span class="experience-company">B.Eng. Operations & Logistics Engineering</span>
+          </div>
+          <p class="experience-description">
+            Ecole de technologie superieure (ETS), Montreal
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p class="muted" style="font-size: 1.05rem; margin-bottom: 1.5rem;">Flexible contract engagements, from short-term delivery to long-term ownership.</p>
-        <div style="display: grid; gap: 1rem;">
-          <a href="mailto:me@alekscp.com" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius); text-decoration: none; color: var(--fg); transition: all 0.2s ease;">
-            <span style="font-size: 1.5rem;">✉️</span>
-            <div>
-              <div style="font-weight: 600; font-size: 1.05rem;">Email</div>
-              <div style="color: var(--accent-hover); font-size: 0.95rem;">me@alekscp.com</div>
-            </div>
-          </a>
-          <a href="https://www.linkedin.com/in/aleks-c-28893426/" target="_blank" rel="noreferrer" style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius); text-decoration: none; color: var(--fg); transition: all 0.2s ease;">
-            <span style="font-size: 1.5rem;">🔗</span>
-            <div>
-              <div style="font-weight: 600; font-size: 1.05rem;">LinkedIn</div>
-              <div style="color: var(--accent-hover); font-size: 0.95rem;">linkedin.com/in/aleks-c-28893426/</div>
-            </div>
-          </a>
-        </div>
+      <div class="section-header">
+        <h2>Contact</h2>
+      </div>
+      <p class="contact-intro">
+        Flexible contract engagements, from short-term delivery to long-term ownership. Senior individual contributor role with high ownership of backend, infrastructure, and data systems. Remote-first, timezone-flexible collaboration.
+      </p>
+      <div class="contact-grid">
+        <a href="mailto:me@alekscp.com" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+          </div>
+          <div class="contact-card-content">
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-value">me@alekscp.com</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/aleks-c-28893426/" target="_blank" rel="noreferrer" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="contact-card-content">
+            <div class="contact-card-label">LinkedIn</div>
+            <div class="contact-card-value">Connect with me</div>
+          </div>
+        </a>
+        <a href="https://github.com/alekscp" target="_blank" rel="noreferrer" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+          <div class="contact-card-content">
+            <div class="contact-card-label">GitHub</div>
+            <div class="contact-card-value">View my work</div>
+          </div>
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <span id="year"></span> © Aleks CP. Senior Software & Infrastructure Consultant.
+    <span><span id="year"></span> Aleks CP</span>
+    <div class="footer-links">
+      <a href="mailto:me@alekscp.com">me@alekscp.com</a>
+      <a href="https://github.com/alekscp" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/aleks-c-28893426/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
   </footer>
 
   <script>
-    // smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-    // current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
