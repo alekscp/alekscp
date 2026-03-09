@@ -1,27 +1,19 @@
-# 👋 Hi, I'm Aleks CP
-**Independent DevOps & Cloud Infrastructure Engineer**
+# Hi, I'm Aleks CP
 
-I design, automate, and operate production-grade infrastructure for startups and technology companies.  
-My focus is building systems that are **secure**, **scalable**, and **maintainable** — from cloud-native platforms to bare-metal deployments.  
-I also contribute to backend development when needed, bridging infrastructure and application layers for smoother workflows and faster delivery.
+Senior DevOps & Cloud Infrastructure Engineer
 
----
+I design, automate, and operate reliable production systems across cloud, backend, and data workflows.
 
-### 🧠 What I Do
-- Architect and automate infrastructure using **Terraform**, **AWS**, **Docker**, **GitHub Actions**, and **Ansible**  
-- Design **CI/CD pipelines**, observability stacks, and infrastructure as code  
-- Deploy and manage high-performance environments on **cloud and bare-metal** setups  
-- Collaborate closely with developers, writing backend code and integrating infrastructure within product teams  
-- Help startups move from MVP to production with pragmatic, cost-efficient infrastructure  
+## What I work on
+- Cloud infrastructure and Infrastructure as Code
+- CI/CD pipelines and operational automation
+- Backend systems, APIs, and distributed services
+- Cost-conscious, production-ready environments
 
----
+## Core stack
+AWS · GCP · Docker · Linux · Grafana · GitHub Actions · Node.js · TypeScript
 
-### 🧰 Tech Focus
-Terraform · AWS · Docker · GitHub Actions · Ansible · Linux · Monitoring & Observability · CI/CD · Bare-Metal Deployments · Node.js · TypeScript
+I live in the terminal — Ghostty, tmux, Neovim, and OpenCode.
 
-I live in the terminal — Nvim, tmux, and plenty of shell scripts.
-
----
-
-### 📫 Contact
-[LinkedIn](https://www.linkedin.com/in/aleks-c-28893426) · [Website](https://alekscp.com)
+## Links
+[LinkedIn](https://www.linkedin.com/in/alekscp/) · [Website](https://alekscp.com)
