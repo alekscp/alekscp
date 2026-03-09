@@ -14,6 +14,3 @@ I design, automate, and operate reliable production systems across cloud, backen
 AWS · GCP · Docker · Linux · Grafana · GitHub Actions · Node.js · TypeScript
 
 I live in the terminal — Ghostty, tmux, Neovim, and OpenCode.
-
-## Links
-[LinkedIn](https://www.linkedin.com/in/alekscp/) · [Website](https://alekscp.com)
