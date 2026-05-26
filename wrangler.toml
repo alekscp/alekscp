@@ -1,0 +1,21 @@
+name = "alekscp-com"
+compatibility_date = "2026-05-26"
+main = "src/worker.mjs"
+workers_dev = true
+
+[[routes]]
+pattern = "alekscp.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.alekscp.com"
+custom_domain = true
+
+[assets]
+directory = "."
+binding = "ASSETS"
+not_found_handling = "404-page"
+run_worker_first = true
+
+[observability]
+enabled = true

@@ -1,0 +1,23 @@
+# Aleks CP
+
+> Senior software and infrastructure consultant for AI agent infrastructure, DevOps automation, cloud systems, and secure self-hosted Hermes deployments.
+
+Aleks CP helps teams design, deploy, and operate production-grade AI agent infrastructure. The strongest current offer is secure self-hosted Hermes deployment on customer VPS or home servers with Docker Compose, Ubuntu hardening, 1Password-backed secret handling, Telegram gateway setup, private Tailscale dashboard access, backups, and handoff documentation.
+
+## Services
+
+- [AI agent infrastructure consulting](https://alekscp.com/#services): Production infrastructure, deployment automation, observability, and operational workflows for AI-enabled systems.
+- [Self-hosted Hermes deployments](https://alekscp.com/#hermes): Secure customer-owned Hermes agent servers with Telegram gateway, optional dashboard, backups, and handoff.
+- [Cloud and DevOps automation](https://alekscp.com/#services): CI/CD, infrastructure automation, backend reliability, and cloud operations.
+- [Technical advisory](https://alekscp.com/#engagements): Fast audits, practical implementation plans, and hands-on delivery.
+
+## Contact
+
+- Website: https://alekscp.com/
+- Email: me@alekscp.com
+- GitHub: https://github.com/alekscp
+- LinkedIn: https://www.linkedin.com/in/alekscp/
+
+## Full Context
+
+- [llms-full.txt](https://alekscp.com/llms-full.txt)
