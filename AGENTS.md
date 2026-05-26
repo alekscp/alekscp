@@ -6,9 +6,11 @@ This document provides guidelines for AI agents working on this static website r
 
 This is a single-page static website consisting of:
 - Single `index.html` file (HTML, CSS, and inline JavaScript)
-- No build process, dependencies, or frameworks
+- Cloudflare Workers static asset deployment via `wrangler.toml`
+- No frontend build process, dependencies, or frameworks
 - No testing framework
-- Professional portfolio for a Senior Software & Infrastructure Consultant
+- Service website for Aleks CP, focused on AI agent infrastructure consulting and self-hosted Hermes deployments
+- AI-readable files: `robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`
 
 ## Build/Lint/Test Commands
 
@@ -46,8 +48,13 @@ eslint index.html
 
 ### Deployment
 ```bash
-# Simply upload index.html to web server
-# Or deploy to Netlify/Vercel with drag-and-drop
+# Deploys happen from GitHub Actions on pushes to main
+# Required GitHub secrets:
+# CLOUDFLARE_ACCOUNT_ID
+# CLOUDFLARE_API_TOKEN
+
+# Local deploy, if Wrangler is installed and .env values are available
+wrangler deploy
 ```
 
 ## Code Style Guidelines
@@ -193,23 +200,25 @@ if (yearEl) {
 # Check status
 git status
 
-# Stage changes
-git add index.html
+# Stage changes, including AI-readable files when updated
+git add index.html robots.txt sitemap.xml llms.txt llms-full.txt
 
 # Commit with descriptive message
-git commit -m "update: refine hero section spacing"
+git commit -m "update: refine AI services homepage"
 
-# Push to remote
-git push origin website
+# Push to remote main for deployment
+git push origin main
 ```
 
 ## Special Notes for AI Agents
 
-- This is a personal portfolio for a Senior Software & Infrastructure Consultant
+- Public name should be `Aleks CP`
+- This is a service site for AI agent infrastructure, Hermes deployments, DevOps automation, and cloud/backend reliability
 - Maintain professional, clean, and modern aesthetic
 - No backend, database, or complex dependencies
 - Focus on simplicity, performance, and accessibility
 - Single-file architecture means changes affect entire page
+- Keep visible frontend copy concise; put fuller crawler-facing context in `llms-full.txt`
 - Test across multiple browsers before finalizing
 
 ## Tools Recommendations

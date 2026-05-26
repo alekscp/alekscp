@@ -1,0 +1,12 @@
+.git
+.github
+.gitignore
+.DS_Store
+.env
+.env.*
+.dev.vars
+.wrangler
+node_modules
+CNAME
+wrangler.toml
+src
