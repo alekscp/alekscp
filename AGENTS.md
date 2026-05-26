@@ -5,7 +5,9 @@ This document provides guidelines for AI agents working on this static website r
 ## Project Overview
 
 This is a single-page static website consisting of:
-- Single `index.html` file (HTML, CSS, and inline JavaScript)
+- Static HTML files with inline CSS/JavaScript
+- Homepage: `index.html`
+- Offer page: `services/hermes-agent-deployment/index.html`
 - Cloudflare Workers static asset deployment via `wrangler.toml`
 - No frontend build process, dependencies, or frameworks
 - No testing framework
@@ -48,10 +50,8 @@ eslint index.html
 
 ### Deployment
 ```bash
-# Deploys happen from GitHub Actions on pushes to main
-# Required GitHub secrets:
-# CLOUDFLARE_ACCOUNT_ID
-# CLOUDFLARE_API_TOKEN
+# Deploys happen from Cloudflare Workers Git integration on pushes to website.
+# GitHub Actions deployment is intentionally disabled unless re-enabled later.
 
 # Local deploy, if Wrangler is installed and .env values are available
 wrangler deploy
@@ -200,14 +200,14 @@ if (yearEl) {
 # Check status
 git status
 
-# Stage changes, including AI-readable files when updated
-git add index.html robots.txt sitemap.xml llms.txt llms-full.txt
+# Stage changes, including AI-readable files and offer pages when updated
+git add index.html services/hermes-agent-deployment/index.html robots.txt sitemap.xml llms.txt llms-full.txt
 
 # Commit with descriptive message
 git commit -m "update: refine AI services homepage"
 
-# Push to remote main for deployment
-git push origin main
+# Push to remote website for deployment
+git push origin website
 ```
 
 ## Special Notes for AI Agents
