@@ -11,9 +11,9 @@ Aleks Clapin-Pépin, also known as Aleks CP, is a senior software engineer and D
 - Tool integrations
 - Knowledge and document workflows
 - Reporting and operational support
-- Hosted agents
+- Hosted agent infrastructure
+- DevOps and reliability
 - Monitoring, maintenance, and support
-- DevOps and infrastructure reliability
 
 ## Typical Setup
 

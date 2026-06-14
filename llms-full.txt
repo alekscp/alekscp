@@ -24,10 +24,10 @@ This is a good fit for small businesses, founder-led teams, agencies, startups, 
 - Tool integrations
 - Knowledge and document workflows
 - Reporting and operational support
-- Hosted agent setup
+- Hosted agent infrastructure
 - Agent configuration and deployment
 - Monitoring, maintenance, and support
-- DevOps and infrastructure reliability
+- DevOps and reliability
 - Docker and Linux service deployment
 - CI/CD and deployment automation
 - Terraform/OpenTofu infrastructure support
