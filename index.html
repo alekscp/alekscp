@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aleks Clapin-Pépin — AI Automation &amp; DevOps</title>
+  <title>AI Automation &amp; DevOps Consultant for Small Teams | Aleks CP</title>
   <meta
     name="description"
-    content="AI automation and DevOps consulting for small teams. Hosted agents, workflow automation, integrations, monitoring, and maintenance."
+    content="Aleks CP helps small teams automate internal work with AI, integrations, and reliable cloud infrastructure. Remote consulting in English and French."
   />
   <meta name="author" content="Aleks Clapin-Pépin" />
   <meta name="robots" content="index, follow" />
@@ -16,43 +16,54 @@
   <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMS full context" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-  <meta property="og:title" content="Aleks Clapin-Pépin — AI Automation &amp; DevOps" />
+  <meta property="og:title" content="AI Automation &amp; DevOps Consultant for Small Teams | Aleks CP" />
   <meta
     property="og:description"
-    content="AI automation and DevOps consulting for small teams. Hosted agents, workflow automation, integrations, monitoring, and maintenance."
+    content="Practical AI automation, integrations, and reliable infrastructure for small teams."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alekscp.com/" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Aleks Clapin-Pépin — AI Automation &amp; DevOps" />
+  <meta name="twitter:title" content="AI Automation &amp; DevOps Consultant for Small Teams | Aleks CP" />
   <meta
     name="twitter:description"
-    content="AI automation and DevOps consulting for small teams. Hosted agents, workflow automation, integrations, monitoring, and maintenance."
+    content="Practical AI automation, integrations, and reliable infrastructure for small teams."
   />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Aleks Clapin-Pépin",
-    "alternateName": "Aleks CP",
-    "url": "https://alekscp.com/",
-    "email": "mailto:me@alekscp.com",
-    "founder": {
-      "@type": "Person",
-      "name": "Aleks Clapin-Pépin",
-      "alternateName": "Aleks CP",
-      "sameAs": ["https://www.linkedin.com/in/alekscp/"]
-    },
-    "areaServed": "Remote",
-    "availableLanguage": ["English", "French"],
-    "serviceType": [
-      "AI automation consulting",
-      "Workflow automation",
-      "Hosted AI agents",
-      "Tool integrations",
-      "DevOps consulting",
-      "Infrastructure reliability"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://alekscp.com/#person",
+        "name": "Aleks Clapin-Pépin",
+        "alternateName": "Aleks CP",
+        "url": "https://alekscp.com/",
+        "email": "mailto:me@alekscp.com",
+        "jobTitle": "Senior Software Engineer and AI Automation & DevOps Consultant",
+        "knowsAbout": ["AI workflow automation", "API integrations", "Linux", "Docker", "CI/CD", "Terraform", "cloud infrastructure", "monitoring"],
+        "sameAs": ["https://www.linkedin.com/in/alekscp/", "https://github.com/alekscp"]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://alekscp.com/#service",
+        "name": "Aleks CP — AI Automation & DevOps Consulting",
+        "url": "https://alekscp.com/",
+        "description": "Hands-on AI automation, systems integration, and DevOps consulting for small teams.",
+        "email": "mailto:me@alekscp.com",
+        "founder": { "@id": "https://alekscp.com/#person" },
+        "areaServed": "Worldwide",
+        "availableLanguage": ["English", "French"],
+        "serviceType": ["AI automation consulting", "workflow automation", "AI agent infrastructure", "tool integrations", "DevOps consulting", "infrastructure reliability"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://alekscp.com/#website",
+        "name": "Aleks CP",
+        "url": "https://alekscp.com/",
+        "publisher": { "@id": "https://alekscp.com/#person" }
+      }
     ]
   }
   </script>
@@ -294,6 +305,7 @@
       </div>
       <nav aria-label="Primary navigation">
         <a href="#work">Work</a>
+        <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -303,10 +315,14 @@
 
   <main class="wrap">
     <section class="hero" aria-labelledby="intro-title">
-      <p class="hero-kicker">AI Automation &amp; DevOps</p>
-      <h1 id="intro-title">Practical automation for small teams.</h1>
-      <p class="hero-lead">I help small teams turn repetitive internal workflows into practical AI-assisted systems.</p>
-      <p class="hero-meta">Hosted agents. Tool integrations. Workflow automation. Monitoring and maintenance.</p>
+      <p class="hero-kicker">AI Automation &amp; DevOps Consulting</p>
+      <h1 id="intro-title">Make recurring work run itself.</h1>
+      <p class="hero-lead">I help small teams turn repetitive internal workflows into useful AI-assisted systems — then make sure they run reliably.</p>
+      <p class="hero-meta">Workflow automation. AI agents and integrations. Cloud infrastructure and operations.</p>
+      <div class="cta">
+        <a href="mailto:me@alekscp.com?subject=AI%20automation%20consulting">Discuss a workflow</a>
+        <a href="#services">See how I can help</a>
+      </div>
     </section>
 
     <section aria-labelledby="positioning-title">
@@ -317,17 +333,21 @@
       </div>
     </section>
 
+    <section id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Services</h2>
+      <div class="stack">
+        <p><strong>AI workflow automation.</strong> Replace repetitive operational work with practical systems for documents, reporting, knowledge, and internal processes.</p>
+        <p><strong>AI agents and integrations.</strong> Connect the tools your team already uses, configure hosted or self-hosted agents, and turn a useful workflow into a dependable service.</p>
+        <p><strong>DevOps and reliability.</strong> Improve the infrastructure behind your product or automation: Linux, Docker, cloud and VPS setup, CI/CD, monitoring, backups, and operational handoff.</p>
+      </div>
+    </section>
+
     <section id="work" aria-labelledby="work-title">
-      <h2 id="work-title">Work Areas</h2>
-      <ul class="work-list">
-        <li>Internal AI assistants</li>
-        <li>Workflow automation</li>
-        <li>Tool integrations</li>
-        <li>Knowledge and document workflows</li>
-        <li>Reporting and operational support</li>
-        <li>Hosted agent infrastructure</li>
-        <li>DevOps and reliability</li>
-      </ul>
+      <h2 id="work-title">Specialised agent deployment</h2>
+      <div class="stack">
+        <p>Need a customer-owned AI agent server rather than a local demo? I offer a defined deployment package with secure defaults, messaging integration, backups, and an operational handoff.</p>
+        <p><a href="/services/hermes-agent-deployment/">Explore the secure self-hosted Hermes AI agent deployment offer</a>.</p>
+      </div>
     </section>
 
     <section id="pricing" aria-labelledby="pricing-title">
@@ -343,7 +363,7 @@
     <section id="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <div class="stack">
-        <p>I’m a senior software engineer and DevOps consultant with 10+ years of experience across cloud infrastructure, Linux, Docker, Terraform/OpenTofu, CI/CD, automation, monitoring, and production systems.</p>
+        <p>I’m a senior software engineer and DevOps consultant with 10+ years of hands-on experience across cloud infrastructure, Linux, Docker, Terraform/OpenTofu, CI/CD, automation, monitoring, and production systems.</p>
         <p class="muted">Based in Berlin. Working remotely in English and French.</p>
       </div>
     </section>
