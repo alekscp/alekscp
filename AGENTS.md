@@ -18,13 +18,12 @@ This is a single-page static website consisting of:
 
 ### Development
 ```bash
-# Open in browser for preview
-open index.html
-
-# Or use Python's built-in server for live reload
-python3 -m http.server 8000
-# Then visit http://localhost:8000
+# Run the site through its Cloudflare Worker and static asset configuration
+npx wrangler dev
+# Then visit http://localhost:8787
 ```
+
+This repository pins Node.js 24 in `.node-version` for fnm. From the repository root, run `fnm use` to select it, then `npx wrangler dev`. If your shell is not configured to switch automatically, run `eval "$(fnm env --use-on-cd)"` once in that shell and `fnm use` again. Wrangler serves the configured static assets and runs `src/worker.mjs`, including redirects and response headers. Visit http://localhost:8787 and stop the server with Ctrl+C.
 
 ### Validation
 ```bash

@@ -3,392 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Automation &amp; DevOps Consultant for Small Teams | Aleks CP</title>
-  <meta
-    name="description"
-    content="Aleks CP helps small teams automate internal work with AI, integrations, and reliable cloud infrastructure. Remote consulting in English and French."
-  />
-  <meta name="author" content="Aleks Clapin-Pépin" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#fbfaf7" />
+  <title>Aleks CP</title>
+  <meta name="description" content="Aleks CP. Building software with friends at Folk Software." />
+  <meta name="theme-color" content="#f6f5f0" />
   <link rel="canonical" href="https://alekscp.com/" />
-  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMS summary" />
-  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMS full context" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-
-  <meta property="og:title" content="AI Automation &amp; DevOps Consultant for Small Teams | Aleks CP" />
-  <meta
-    property="og:description"
-    content="Practical AI automation, integrations, and reliable infrastructure for small teams."
-  />
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="About Aleks CP" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet" />
+  <meta property="og:title" content="Aleks CP" />
+  <meta property="og:description" content="Building software with friends at Folk Software." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alekscp.com/" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="AI Automation &amp; DevOps Consultant for Small Teams | Aleks CP" />
-  <meta
-    name="twitter:description"
-    content="Practical AI automation, integrations, and reliable infrastructure for small teams."
-  />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://alekscp.com/#person",
-        "name": "Aleks Clapin-Pépin",
-        "alternateName": "Aleks CP",
-        "url": "https://alekscp.com/",
-        "email": "mailto:me@alekscp.com",
-        "jobTitle": "Senior Software Engineer and AI Automation & DevOps Consultant",
-        "knowsAbout": ["AI workflow automation", "API integrations", "Linux", "Docker", "CI/CD", "Terraform", "cloud infrastructure", "monitoring"],
-        "sameAs": ["https://www.linkedin.com/in/alekscp/", "https://github.com/alekscp"]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://alekscp.com/#service",
-        "name": "Aleks CP — AI Automation & DevOps Consulting",
-        "url": "https://alekscp.com/",
-        "description": "Hands-on AI automation, systems integration, and DevOps consulting for small teams.",
-        "email": "mailto:me@alekscp.com",
-        "founder": { "@id": "https://alekscp.com/#person" },
-        "areaServed": "Worldwide",
-        "availableLanguage": ["English", "French"],
-        "serviceType": ["AI automation consulting", "workflow automation", "AI agent infrastructure", "tool integrations", "DevOps consulting", "infrastructure reliability"]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://alekscp.com/#website",
-        "name": "Aleks CP",
-        "url": "https://alekscp.com/",
-        "publisher": { "@id": "https://alekscp.com/#person" }
-      }
-    ]
-  }
-  </script>
-
   <style>
-    :root {
-      --bg: #fbfaf7;
-      --text: #181818;
-      --muted: #5f5b55;
-      --line: #ded9cf;
-      --link: #111111;
-      --max: 880px;
-      --space: clamp(1.25rem, 4vw, 2rem);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 1rem;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.18em;
-    }
-
-    a:hover,
-    a:focus {
-      text-decoration-thickness: 2px;
-    }
-
-    a:focus-visible {
-      outline: 2px solid var(--text);
-      outline-offset: 4px;
-    }
-
-    .wrap {
-      width: min(100% - (var(--space) * 2), var(--max));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .header-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.75rem 1.5rem;
-    }
-
-    .identity {
-      display: grid;
-      gap: 0.1rem;
-    }
-
-    .identity strong {
-      font-size: 0.94rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-
-    .identity span {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      font-size: 0.94rem;
-    }
-
-    main {
-      padding: clamp(3.25rem, 9vw, 6rem) 0 clamp(3rem, 8vw, 5rem);
-    }
-
-    .hero {
-      display: grid;
-      gap: 1.5rem;
-      max-width: 780px;
-      margin-bottom: clamp(3rem, 8vw, 5.5rem);
-      padding-top: 0;
-      border-top: 0;
-    }
-
-    .hero-kicker {
-      color: var(--muted);
-      font-size: 0.86rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2 {
-      margin: 0;
-      font-weight: 650;
-      line-height: 1.1;
-      letter-spacing: 0;
-    }
-
-    h1 {
-      max-width: 12ch;
-      font-size: clamp(3.1rem, 8vw, 5.4rem);
-      line-height: 0.96;
-    }
-
-    h2 {
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-    }
-
-    p {
-      margin: 0;
-      max-width: 680px;
-    }
-
-    .hero-lead {
-      color: var(--muted);
-      font-size: clamp(1.1rem, 2vw, 1.35rem);
-      line-height: 1.5;
-    }
-
-    .hero-meta {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    section {
-      padding: clamp(1.75rem, 5vw, 3rem) 0;
-      border-top: 1px solid var(--line);
-    }
-
-    section > h2 {
-      margin-bottom: 1rem;
-    }
-
-    .stack {
-      display: grid;
-      gap: 0.8rem;
-    }
-
-    .work-list {
-      display: grid;
-      gap: 0.45rem 2rem;
-      grid-template-columns: 1fr;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      color: var(--muted);
-    }
-
-    .work-list li {
-      padding-top: 0.45rem;
-      border-top: 1px solid rgba(24, 24, 24, 0.12);
-    }
-
-    .pricing {
-      display: grid;
-      gap: 0.55rem;
-      color: var(--muted);
-    }
-
-    .pricing strong {
-      color: var(--text);
-      font-weight: 650;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .cta {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem 1rem;
-      align-items: center;
-    }
-
-    .cta a:first-child {
-      font-weight: 650;
-    }
-
-    .site-footer {
-      padding: 1.25rem 0 2rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-      border-top: 1px solid var(--line);
-    }
-
-    @media (min-width: 720px) {
-      section:not(.hero) {
-        display: grid;
-        grid-template-columns: 11rem minmax(0, 1fr);
-        gap: 2rem;
-      }
-
-      section:not(.hero) > h2 {
-        margin-bottom: 0;
-      }
-
-      .work-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 520px) {
-      h1 {
-        max-width: 10ch;
-      }
-    }
+    :root { --bg: #f6f5f0; --fg: #252821; --muted: #66695f; --line: #d7d9cf; --accent: #526346; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
+    main { min-height: 100vh; min-height: 100svh; display: grid; align-content: center; width: min(100% - 3rem, 42rem); margin: auto; padding: 5rem 0; }
+    .mark { width: 0.65rem; height: 0.65rem; background: var(--accent); border-radius: 50%; margin-bottom: 2.5rem; }
+    h1 { font-size: clamp(3.5rem, 12vw, 6rem); font-weight: 500; letter-spacing: -0.075em; line-height: 1.05; margin: 0; }
+    p { color: var(--muted); font-size: clamp(1rem, 2.5vw, 1.125rem); line-height: 1.65; margin: 1.5rem 0 3.5rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+    a { display: inline-flex; gap: 1rem; align-items: center; min-height: 2.75rem; color: var(--fg); font: 0.875rem/1.65 "Space Mono", monospace; text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 0.3em; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+    .arrow { color: var(--accent); }
+    @media (max-width: 760px) { main { width: min(100% - 3rem, 32rem); } }
+    @media (prefers-reduced-motion: reduce) { a { transition: none; } }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap header-row">
-      <div class="identity" aria-label="Site identity">
-        <strong>ALEKS CLAPIN-PÉPIN</strong>
-        <span>AI Automation &amp; DevOps</span>
-      </div>
-      <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section class="hero" aria-labelledby="intro-title">
-      <p class="hero-kicker">AI Automation &amp; DevOps Consulting</p>
-      <h1 id="intro-title">Make recurring work run itself.</h1>
-      <p class="hero-lead">I help small teams turn repetitive internal workflows into useful AI-assisted systems — then make sure they run reliably.</p>
-      <p class="hero-meta">Workflow automation. AI agents and integrations. Cloud infrastructure and operations.</p>
-      <div class="cta">
-        <a href="mailto:me@alekscp.com?subject=AI%20automation%20consulting">Discuss a workflow</a>
-        <a href="#services">See how I can help</a>
-      </div>
-    </section>
-
-    <section aria-labelledby="positioning-title">
-      <h2 id="positioning-title">Done-for-you setup</h2>
-      <div class="stack">
-        <p>I handle the technical setup: servers, deployment, APIs, agent configuration, updates, and reliability.</p>
-        <p>You bring the workflow. I make it usable.</p>
-      </div>
-    </section>
-
-    <section id="services" aria-labelledby="services-title">
-      <h2 id="services-title">Services</h2>
-      <div class="stack">
-        <p><strong>AI workflow automation.</strong> Replace repetitive operational work with practical systems for documents, reporting, knowledge, and internal processes.</p>
-        <p><strong>AI agents and integrations.</strong> Connect the tools your team already uses, configure hosted or self-hosted agents, and turn a useful workflow into a dependable service.</p>
-        <p><strong>DevOps and reliability.</strong> Improve the infrastructure behind your product or automation: Linux, Docker, cloud and VPS setup, CI/CD, monitoring, backups, and operational handoff.</p>
-      </div>
-    </section>
-
-    <section id="work" aria-labelledby="work-title">
-      <h2 id="work-title">Specialised agent deployment</h2>
-      <div class="stack">
-        <p>Need a customer-owned AI agent server rather than a local demo? I offer a defined deployment package with secure defaults, messaging integration, backups, and an operational handoff.</p>
-        <p><a href="/services/hermes-agent-deployment/">Explore the secure self-hosted Hermes AI agent deployment offer</a>.</p>
-      </div>
-    </section>
-
-    <section id="pricing" aria-labelledby="pricing-title">
-      <h2 id="pricing-title">Pricing</h2>
-      <div class="pricing">
-        <p><strong>Starter setup</strong> usually starts around €300–€1,000 depending on scope.</p>
-        <p><strong>Ongoing hosting, monitoring, maintenance, and support</strong> starts from €200/month.</p>
-        <p>LLM/API usage is billed directly to the client where possible.</p>
-        <p>These are starting points, not fixed unlimited-scope packages.</p>
-      </div>
-    </section>
-
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
-      <div class="stack">
-        <p>I’m a senior software engineer and DevOps consultant with 10+ years of hands-on experience across cloud infrastructure, Linux, Docker, Terraform/OpenTofu, CI/CD, automation, monitoring, and production systems.</p>
-        <p class="muted">Based in Berlin. Working remotely in English and French.</p>
-      </div>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Send me one workflow you want to automate.</h2>
-      <p class="muted">I’ll tell you if it is realistic, what I would automate, and what I would avoid.</p>
-      <div class="cta">
-        <a aria-label="Email Aleks Clapin-Pépin" href="mailto:me@alekscp.com?subject=Workflow%20automation%20consulting">me@alekscp.com</a>
-        <a aria-label="Open Aleks Clapin-Pépin on LinkedIn" href="https://www.linkedin.com/in/alekscp/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
-    </section>
+  <main>
+    <div class="mark" aria-hidden="true"></div>
+    <h1>Aleks CP</h1>
+    <p>Building software with friends.</p>
+    <nav aria-label="Find me elsewhere">
+      <a href="https://folk.software/">Folk Software <span class="arrow" aria-hidden="true">↗</span></a>
+      <a href="https://www.linkedin.com/in/alekscp/">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+    </nav>
   </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>&copy; <span id="year">2026</span> Aleks Clapin-Pépin.</p>
-    </div>
-  </footer>
-
-  <script>
-    const yearEl = document.getElementById("year");
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
-  </script>
 </body>
 </html>
