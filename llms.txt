@@ -1,7 +1,26 @@
 # Aleks CP
 
-Aleks CP builds software with friends at Folk Software.
+> Aleks CP (also Aleks Clapin-Pépin) is a Senior Platform Engineer and SRE with 10+ years building and operating production infrastructure. He co-founded Folk Software, a software studio that builds cloud infrastructure and AI agent systems for small teams, and offers packaged, self-hosted Hermes Agent deployments.
 
-- Website: https://alekscp.com/
-- Company: https://folk.software/
-- LinkedIn: https://www.linkedin.com/in/alekscp/
+Based in Bangkok, Thailand (UTC+7). Open to fully remote employment or B2B contracts. Works async-first. Languages: English, French (native or bilingual), German (elementary). Contact: me@alekscp.com
+
+Core skills: Kubernetes, Terraform/OpenTofu, AWS, GCP, Linux, Docker, CI/CD, observability, production operations, AI agent infrastructure.
+
+## Services
+
+- [Secure self-hosted Hermes AI agent deployment](https://alekscp.com/services/hermes-agent-deployment/index.md): Ubuntu server setup, Docker Compose runtime, Telegram or Discord integration, private access via Tailscale or reverse proxy, backups, restore notes, and handoff documentation.
+
+## Profile
+
+- [Homepage](https://alekscp.com/index.md): Name, role summary, and links.
+- [Career history](https://alekscp.com/llms-full.txt): Roles, companies, and responsibilities from 2015 to present.
+
+## Links
+
+- [LinkedIn](https://www.linkedin.com/in/alekscp/): professional profile and work history
+- [GitHub](https://github.com/alekscp): code
+- [Folk Software](https://folk.software/): software studio co-founded by Aleks CP
+
+## Optional
+
+- [Full context](https://alekscp.com/llms-full.txt): career history, services in detail, fit, and contact guidance

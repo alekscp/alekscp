@@ -1,7 +1,98 @@
-# Aleks CP
+# Aleks CP: full context
 
-Aleks CP builds software with friends at Folk Software.
+Aleks CP (also Aleks Clapin-Pépin) is a Senior Platform, DevOps, and SRE Engineer with 10+ years building and operating production infrastructure.
 
 - Website: https://alekscp.com/
-- Company: https://folk.software/
+- Email: me@alekscp.com
 - LinkedIn: https://www.linkedin.com/in/alekscp/
+- GitHub: https://github.com/alekscp
+- Location: Bangkok, Thailand (UTC+7)
+- Availability: open to fully remote employment or B2B contracts; async-first
+- Languages: English (native or bilingual), French (native or bilingual), German (elementary)
+- Headline: Senior Platform Engineer | Kubernetes, Terraform/OpenTofu, AWS & GCP | Production infrastructure, CI/CD, observability
+
+## Summary
+
+Aleks CP has 10+ years of experience building and operating production infrastructure. Core skills: Kubernetes, Terraform/OpenTofu, AWS, GCP, Linux, Docker, CI/CD, observability, and production operations.
+
+Recent work includes:
+
+- Leading the migration of core services from AWS to bare-metal infrastructure to reduce cloud costs and improve operational control.
+- Owning infrastructure automation and microservices for DeFi backend platforms.
+- Building and operating hosted AI agent and workflow automation systems for small teams, with the same monitoring, CI/CD, and maintenance discipline as production infrastructure.
+
+Targeting roles: Platform Engineer, DevOps Engineer, SRE, and forward-deployed engineering roles that involve infrastructure or integrations.
+
+## Experience
+
+### Folk Software (co-founder)
+- Role: Co-founder / DevOps Consultant & AI Automation
+- Dates: January 2024 to present
+- Location: Berlin, Germany
+- Co-founded a software studio delivering cloud infrastructure, automation, and AI workflow systems for small teams.
+- Build and operate hosted AI agents and workflow automation (n8n, Postgres, Docker, Linux) on cloud and bare-metal infrastructure, including monitoring, CI/CD, and updates.
+- Lead backend, deployment, and production operations across studio projects.
+- Website: https://folk.software/
+
+### Octav
+- Role: Lead Software Engineer
+- Dates: April 2023 to January 2026
+- Location: Montreal, Quebec, Canada
+- Led the migration of core services from AWS to bare-metal infrastructure, reducing cloud costs and improving operational control.
+- Managed CI/CD pipelines and production infrastructure, improving deployment reliability and stability.
+- Led development of ingestion pipelines for high-volume on-chain and off-chain financial data, focused on reliability and data correctness.
+
+### ARCx DAO
+- Role: Senior Software Engineer
+- Dates: September 2021 to March 2023
+- Location: Sydney, New South Wales, Australia
+- Built and operated backend infrastructure for DeFi protocols, wallet interactions, and EVM-based networks.
+- Owned microservices architecture and infrastructure automation using Terraform and cloud-native tooling.
+- Built secure public APIs and data workflows for protocol integrations and on-chain data access.
+
+### Babbel
+- Role: Software Engineer
+- Dates: October 2017 to November 2020
+- Location: Berlin, Germany
+- Led the migration of backend systems toward microservices and modern cloud infrastructure.
+- Owned backend systems serving millions of users, including payment-related workflows.
+- Participated in on-call rotations for critical production systems and infrastructure.
+
+### Wimdu
+- Role: Backend Developer
+- Dates: November 2015 to September 2017
+- Location: Berlin, Germany
+- Built backend services and data pipelines for a large-scale marketplace platform.
+- Built automation services that improved reliability, data consistency, and observability.
+
+## Education
+
+- École de technologie supérieure, Bachelor's Degree, Industrial Engineering
+
+## Services
+
+### Secure self-hosted Hermes AI agent deployment
+Full page: https://alekscp.com/services/hermes-agent-deployment/
+Markdown: https://alekscp.com/services/hermes-agent-deployment/index.md
+
+A packaged deployment of customer-owned Hermes Agent infrastructure on a VPS, cloud instance, or home server.
+
+Scope:
+- Server baseline: Ubuntu server setup, firewall defaults, fail2ban, unattended upgrades, restart-on-reboot behavior
+- Hermes runtime: Hermes Agent installation, Docker Compose runtime, persistent data paths, generated configuration, verification checklist
+- Messaging integration: Telegram gateway setup, optional Discord integration, allowed-user access control, provider/API key configuration
+- Operations handoff: optional dashboard, Tailscale or reverse proxy access, simple backups, restore notes, handoff documentation
+
+Security model: dashboard and API surfaces stay private unless public exposure is deliberately designed. Tailscale is the preferred private access path. A reverse proxy is added when a public domain, TLS, and access controls are required.
+
+Good fit: founders, developers, small teams, and agencies that need self-hosted AI automation infrastructure with practical DevOps support.
+
+Not the best fit: generic AI strategy, no-code-only automation, or enterprise management consulting without hands-on implementation work.
+
+To request a quote, send: the VPS or hosting target, desired messaging gateway, LLM provider, dashboard preference, and the first workflow the agent should run. Contact: me@alekscp.com
+
+## Contact
+
+- Email: me@alekscp.com
+- LinkedIn: https://www.linkedin.com/in/alekscp/
+- GitHub: https://github.com/alekscp

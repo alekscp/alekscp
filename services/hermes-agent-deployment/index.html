@@ -12,8 +12,9 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#101214" />
   <link rel="canonical" href="https://alekscp.com/services/hermes-agent-deployment/" />
-  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMS summary" />
-  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMS full context" />
+  <link rel="describedby" type="text/plain" href="/llms.txt" title="llms.txt: AI-readable summary" />
+  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="llms-full.txt: full AI-readable context" />
+  <link rel="alternate" type="text/markdown" href="/services/hermes-agent-deployment/index.md" title="Markdown version" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <meta property="og:title" content="Secure Self-Hosted Hermes AI Agent Deployment | Aleks CP" />
   <meta
@@ -39,13 +40,19 @@
         "@type": "Person",
         "@id": "https://alekscp.com/#person",
         "name": "Aleks CP",
-        "alternateName": "Aleks Clapin-P\u00e9pin",
+        "alternateName": ["Aleks Clapin-P\u00e9pin", "Aleks Clapin-Pepin"],
         "url": "https://alekscp.com/",
-        "email": "mailto:me@alekscp.com",
-        "jobTitle": "Senior Software Engineer, DevOps Consultant, and AI Agent Infrastructure Consultant",
+        "email": "me@alekscp.com",
+        "jobTitle": "Senior Platform Engineer",
+        "description": "Senior Platform, DevOps, and SRE Engineer with 10+ years building and operating production infrastructure. Co-founder of Folk Software. Offers self-hosted Hermes AI agent deployments.",
+        "knowsAbout": ["Kubernetes", "Terraform", "OpenTofu", "AWS", "Google Cloud Platform", "Docker", "Linux", "CI/CD", "Observability", "Site Reliability Engineering", "Platform Engineering", "DevOps", "AI agent infrastructure", "Hermes Agent", "Self-hosted AI agents"],
+        "knowsLanguage": ["en", "fr", "de"],
+        "address": { "@type": "PostalAddress", "addressLocality": "Bangkok", "addressCountry": "TH" },
+        "worksFor": { "@type": "Organization", "name": "Folk Software", "url": "https://folk.software/" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "École de technologie supérieure" },
         "sameAs": [
-          "https://github.com/alekscp",
-          "https://www.linkedin.com/in/alekscp/"
+          "https://www.linkedin.com/in/alekscp/",
+          "https://github.com/alekscp"
         ]
       },
       {
@@ -53,7 +60,7 @@
         "@id": "https://alekscp.com/#organization",
         "name": "Aleks CP AI Agent Infrastructure Consulting",
         "url": "https://alekscp.com/",
-        "email": "mailto:me@alekscp.com",
+        "email": "me@alekscp.com",
         "areaServed": "Worldwide / Remote",
         "provider": { "@id": "https://alekscp.com/#person" },
         "contactPoint": {
@@ -311,7 +318,6 @@
       <a class="site-brand" href="/">Aleks CP</a>
       <nav class="site-nav" aria-label="Primary">
         <a href="/">Home</a>
-        <a href="/#services">Services</a>
         <a href="/llms.txt">llms.txt</a>
         <a href="mailto:me@alekscp.com">Contact</a>
       </nav>
