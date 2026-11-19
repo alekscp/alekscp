@@ -10,8 +10,19 @@ const AI_CRAWLER_PATTERNS = [
   /CCBot/i,
 ];
 
-function withSecurityHeaders(response) {
+function withTextCharset(pathname, headers) {
+  if (pathname.endsWith(".md")) {
+    headers.set("Content-Type", "text/markdown; charset=utf-8");
+  } else if (pathname.endsWith(".txt")) {
+    headers.set("Content-Type", "text/plain; charset=utf-8");
+  }
+}
+
+function withSecurityHeaders(response, pathname) {
   const headers = new Headers(response.headers);
+  if (response.ok) {
+    withTextCharset(pathname, headers);
+  }
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
@@ -43,6 +54,6 @@ export default {
     }
 
     const response = await env.ASSETS.fetch(request);
-    return withSecurityHeaders(response);
+    return withSecurityHeaders(response, url.pathname);
   },
 };
